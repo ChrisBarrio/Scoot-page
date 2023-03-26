@@ -9,6 +9,7 @@ import PageHero from '../components/PageHero';
 import DigitalEra from '../assets/images/digital-era.jpg';
 import BetterLiving from '../assets/images/better-living.jpg';
 
+import Abouthero from '../assets/images/about-hero-desktop.jpg'
 
 const dataMobility = {
   image: DigitalEra,
@@ -26,7 +27,7 @@ const dataBetter = {
 const About = () => {
   return (
     <section className="min-h-screen overflow-hidden">
-      <PageHero title="About" backgroundHero="bg-about-hero" />
+      <PageHero title="About" backgroundHero={`bg-[url(${Abouthero})]`} />
       <RightArrowSection dataText={dataMobility} />
       <LeftArrowSection dataText={dataBetter} />
       <OurValues title='Our values' />
