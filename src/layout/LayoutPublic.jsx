@@ -31,11 +31,11 @@ const LayoutPublic = () => {
         <Outlet />
       </main>
       <SingupHero />
-      <footer className=" flex h-[8rem] items-center justify-around bg-slate-800 px-8">
+      <footer className=" flex gap-10 py-10 items-center justify-around bg-slate-800 px-8 max-md:flex-col">
         <Link to="/">
           <LogoSvg />
         </Link>
-        <nav className="flex gap-10">
+        <nav className="flex gap-10 max-md:flex max-md:flex-col">
           {navList.map((e) => (
             <Link
               key={e.name}

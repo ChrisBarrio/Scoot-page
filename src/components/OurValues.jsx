@@ -25,13 +25,13 @@ const dataOurValues = [
   },
 ];
 
-const OurValues = () => {
+const OurValues = ({title}) => {
   return (
     <section>
       <h2 className="text-center font-mono text-4xl font-semibold text-slate-700">
-        Our values
+        {title}
       </h2>
-      <div className="mx-auto grid w-3/4 grid-cols-3 gap-16">
+      <div className="mx-auto grid w-3/4 grid-cols-3 max-md:grid-cols-1 gap-16">
         {dataOurValues.map((e) => (
           <div key={e.title} className="flex flex-col gap-8 text-center relative">
             <img
@@ -39,7 +39,7 @@ const OurValues = () => {
               alt={e.title}
               className="scale-75 rounded-full"
             />
-            <div className="flex justify-center items-center h-24 w-24 rounded-full bg-amber-400 text-black absolute bottom-44 left-[7.5rem]">
+            <div className="flex justify-center items-center h-24 w-24 rounded-full bg-amber-400 text-black absolute bottom-44 left-[7.5rem] max-md:left-[5.7rem]">
               <p className='font-semibold'>{e.id}</p>
             </div>
             <h4 className="text-mono text-2xl font-bold text-slate-700">

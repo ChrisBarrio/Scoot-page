@@ -39,10 +39,10 @@ const ApplyJobs = () => {
     <section className="my-20">
       <div className="mx-auto flex w-3/4 flex-col">
         {listJobs.map((e) => (
-          <div key={e.id} className="flex my-2 w-full justify-between bg-[#f2f5f9] p-4 ">
-            <div className="flex flex-col gap-2">
+          <div key={e.id} className="flex my-2 w-full justify-between bg-[#f2f5f9] p-4 max-md:flex-col">
+            <div className="flex flex-col max-md:items-center max-md:mb-4 gap-2">
               <h4 className="text-xl font-bold text-slate-700">{e.position}</h4>
-              <p className="text-slate-600">{e.country}</p>
+              <p className="text-slate-600 font-mono">{e.country}</p>
             </div>
             <div className="flex flex-col justify-center">
               <PrimaryBtn title="Apply" />

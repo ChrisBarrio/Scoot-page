@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'home-hero': "url('src/assets/images/home-hero-desktop.jpg')",
+        'home-hero-mobile': "url('src/assets/images/home-hero-mobile.jpg')",
         'about-hero': "url('src/assets/images/about-hero-desktop.jpg')",
         'careers-hero':
           "url('src/assets/images/careers-location-hero-mobile.jpg')",

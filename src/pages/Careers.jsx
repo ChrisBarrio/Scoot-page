@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHero from '../components/PageHero';
 import RightArrowSection from '../components/RightArrowSection';
-import WhyJoin from '../components/WhyJoin';
+import OurValues from '../components/OurValues';
 import ApplyJobs from '../components/ApplyJobs';
 
 import JoinUs from '../assets/images/join-us.jpg';
@@ -18,7 +18,7 @@ const Careers = () => {
     <section className="min-h-screen overflow-hidden">
       <PageHero title="Careers" backgroundHero="bg-careers-hero" />
       <RightArrowSection dataText={dataCare} arrowUbication='top-60' />
-      <WhyJoin />
+      <OurValues title='Why join us?' />
       <ApplyJobs />
     </section>
   );

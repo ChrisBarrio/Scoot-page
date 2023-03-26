@@ -26,18 +26,18 @@ const dataSteps = [
 const StepsShipping = () => {
   return (
     <>
-      <div className="mx-auto my-20 grid w-3/4 grid-cols-3 gap-8">
+      <div className="mx-auto my-20 grid w-3/4 grid-cols-3 max-md:grid-cols-1  gap-8">
         {dataSteps.map((e) => (
-          <div key={e.title} className="flex flex-col gap-8">
+          <div key={e.title} className="flex flex-col max-md:items-center gap-8 max-md:gap-2 max-md:my-4">
             {e.icon}
             <h3 className="mt-16 text-2xl font-semibold text-slate-700 font-mono">
               {e.title}
             </h3>
-            <p className="text-slate-600">{e.text}</p>
+            <p className="text-slate-600 max-md:text-center">{e.text}</p>
           </div>
         ))}
       </div>
-      <div className="absolute h-4 w-2/3 -bottom-24 -z-10  bg-sky-100"></div>
+      <div className="absolute h-4 w-2/3 -bottom-24 -z-10  bg-sky-100 max-md:hidden"></div>
     </>
   );
 };

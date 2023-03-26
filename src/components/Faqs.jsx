@@ -35,9 +35,9 @@ const Faqs = () => {
   return (
     <section className="my-20">
       <h3 className="text-center text-4xl text-slate-700">FAQs</h3>
-      <div className="my-10 mx-auto flex w-3/4">
-        <div className="w-1/4">
-          <h4 className=" ml-4 text-4xl font-bold text-slate-700">
+      <div className="my-10 mx-auto flex w-3/4 max-md:flex-col max-md:items-center max-md:w-full">
+        <div className="w-1/4 max-md:w-full">
+          <h4 className=" ml-4 text-4xl font-bold text-slate-700 max-md:text-center max-md:my-4">
             How it works
           </h4>
         </div>
@@ -45,9 +45,9 @@ const Faqs = () => {
           <Accordion dataText={dataHowItWorks} />
         </div>
       </div>
-      <div className="my-10 mx-auto flex w-3/4">
-        <div className="w-1/4">
-          <h4 className=" ml-4 text-4xl font-bold text-slate-700">
+      <div className="my-10 mx-auto flex w-3/4 max-md:flex-col max-md:items-center max-md:w-full">
+        <div className="w-1/4 max-md:w-full">
+          <h4 className=" ml-4 text-4xl font-bold text-slate-700 max-md:text-center max-md:my-4">
             Safe driving
           </h4>
         </div>

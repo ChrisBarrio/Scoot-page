@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import LogoSvg from '../components/icons/LogoSvg';
+
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import PrimaryBtn from './PrimaryBtn';
 
@@ -21,12 +24,27 @@ const navList = [
 ];
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(true);
   return (
     <header className="flex items-center justify-between px-6 py-8">
-      <Link to='/'>
+      <Link to="/">
         <LogoSvg />
       </Link>
-      <nav className="flex gap-24">
+      <button
+        onClick={() => {
+          setToggle(!toggle);
+        }}
+        className="mr-4 hidden text-black max-md:block"
+      >
+        {toggle ? <MenuIcon /> : <CloseIcon />}
+      </button>
+      <nav
+        className={
+          !toggle
+            ? `navbar navbar-dark bg-dark container absolute top-20 left-0 z-10 flex w-full flex-col justify-center gap-14  bg-slate-800 py-7 text-center text-white`
+            : `flex items-center gap-24 max-md:hidden`
+        }
+      >
         {navList.map((e) => (
           <Link
             key={e.name}
@@ -36,8 +54,8 @@ const Navbar = () => {
             {e.name}
           </Link>
         ))}
+        <PrimaryBtn title="Get Scootin" />
       </nav>
-      <PrimaryBtn title="Get Scootin" />
     </header>
   );
 };

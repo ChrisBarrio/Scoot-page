@@ -29,7 +29,7 @@ const About = () => {
       <PageHero title="About" backgroundHero="bg-about-hero" />
       <RightArrowSection dataText={dataMobility} />
       <LeftArrowSection dataText={dataBetter} />
-      <OurValues />
+      <OurValues title='Our values' />
       <Faqs />
     </section>
   );
