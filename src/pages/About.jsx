@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import LeftArrowSection from '../components/LeftArrowSection';
 import RightArrowSection from '../components/RightArrowSection';
@@ -9,7 +10,7 @@ import PageHero from '../components/PageHero';
 import DigitalEra from '../assets/images/digital-era.jpg';
 import BetterLiving from '../assets/images/better-living.jpg';
 
-import bgheropage from '../assets/images/about-hero-desktop.jpg'
+import bgheropage from '../assets/images/about-hero-desktop.jpg';
 
 const dataMobility = {
   image: DigitalEra,
@@ -24,13 +25,22 @@ const dataBetter = {
 
 const About = () => {
   return (
-    <section className="min-h-screen overflow-hidden">
-      <PageHero title="About" backgroundHero={bgheropage} />
-      <RightArrowSection dataText={dataMobility} />
-      <LeftArrowSection dataText={dataBetter} />
-      <OurValues title="Our values" />
-      <Faqs />
-    </section>
+    <>
+      <Helmet>
+        <title>Scoot || About</title>
+        <meta
+          name="description"
+          content="pagina de informacion de la empresa / producto"
+        />
+      </Helmet>
+      <section className="min-h-screen overflow-hidden">
+        <PageHero title="About" backgroundHero={bgheropage} />
+        <RightArrowSection dataText={dataMobility} />
+        <LeftArrowSection dataText={dataBetter} />
+        <OurValues title="Our values" />
+        <Faqs />
+      </section>
+    </>
   );
 };
 

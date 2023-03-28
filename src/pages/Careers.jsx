@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 import PageHero from '../components/PageHero';
 import RightArrowSection from '../components/RightArrowSection';
 import OurValues from '../components/OurValues';
@@ -6,7 +8,7 @@ import ApplyJobs from '../components/ApplyJobs';
 
 import JoinUs from '../assets/images/join-us.jpg';
 
-import bgheropage from '../assets/images/careers-locations-hero-desktop.jpg'
+import bgheropage from '../assets/images/careers-locations-hero-desktop.jpg';
 
 const dataCare = {
   image: JoinUs,
@@ -16,17 +18,20 @@ const dataCare = {
 
 const Careers = () => {
   return (
-    <section className="min-h-screen overflow-hidden">
-      <PageHero title="Careers" backgroundHero={bgheropage} />
-      <RightArrowSection dataText={dataCare} arrowUbication='top-60' />
-      <OurValues title='Why join us?' />
-      <ApplyJobs />
-    </section>
+    <>
+      <Helmet>
+        <title>Scoot || Careers</title>
+        <meta name='description' content='careers de la empresa / producto' />
+
+      </Helmet>
+      <section className="min-h-screen overflow-hidden">
+        <PageHero title="Careers" backgroundHero={bgheropage} />
+        <RightArrowSection dataText={dataCare} arrowUbication="top-60" />
+        <OurValues title="Why join us?" />
+        <ApplyJobs />
+      </section>
+    </>
   );
 };
 
 export default Careers;
-
-
-
-
