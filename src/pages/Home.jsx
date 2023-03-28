@@ -7,8 +7,9 @@ import RightArrowSection from '../components/RightArrowSection';
 
 import Telemetry from '../assets/images/telemetry.jpg';
 import City from '../assets/images/near-you.jpg';
-import Payments from '../assets/images/payments.jpg';
+import Payments from '../assets/images/payments.jpg'
 
+import backgroundHero from '../assets/images/home-hero-desktop.jpg'
 
 const dataTelemetry = {
   image:Telemetry,  
@@ -31,7 +32,7 @@ const dataZero = {
 const Home = () => {
   return (
     <section className="min-h-screen">
-      <Hero />
+      <Hero backgroundHero={backgroundHero} />
       <StepsShipping />
       <RightArrowSection dataText={dataTelemetry}/>
       <LeftArrowSection dataText={dataComing}/>

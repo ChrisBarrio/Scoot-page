@@ -7,7 +7,7 @@ import mapImg from '../assets/images/world-map-desktop.png';
 
 const Locations = ['New York', 'London', 'Yokohama', 'Jakarta'];
 
-import bgheropage from '../assets/images/about-hero-desktop.jpg'
+import bgheropage from '../assets/images/careers-locations-hero-desktop.jpg'
 
 
 const Location = () => {

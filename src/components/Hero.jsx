@@ -6,10 +6,15 @@ import RightArrowsSvg from '../components/icons/RightArrowsSvg';
 import LineSvg from '../components/icons/LineSvg';
 import WhiteCircleSvg from '../components/icons/WhiteCircleSvg';
 
-const Hero = () => {
+const Hero = ({backgroundHero}) => {
   return (
-    <div className="relative flex h-[36rem] w-full items-center overflow-hidden bg-slate-400 bg-home-hero bg-cover bg-no-repeat max-md:bg-home-hero-mobile">
-      <div className="mx-40 mt-20 flex w-1/3 flex-col gap-10 text-white  max-md:mx-4 max-md:w-full max-md:my-20">
+    <div className="relative bg-center flex h-[36rem] w-full items-center overflow-hidden bg-cover bg-no-repeat">
+      <img
+        src={backgroundHero}
+        alt="imagen hero de la página"
+        className="absolute h-full w-full object-cover -z-10"
+      />
+      <div className="mx-40 mt-20 flex w-1/3 flex-col gap-10 text-white  max-md:mx-4 max-md:my-20 max-md:w-full">
         <h2 className="font-mono text-6xl font-semibold max-md:text-center max-md:text-5xl">
           Scooter sharing made simple
         </h2>
