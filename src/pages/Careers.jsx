@@ -6,6 +6,7 @@ import ApplyJobs from '../components/ApplyJobs';
 
 import JoinUs from '../assets/images/join-us.jpg';
 
+import bgheropage from '../assets/images/careers-locations-hero-desktop.jpg'
 
 const dataCare = {
   image: JoinUs,
@@ -16,7 +17,7 @@ const dataCare = {
 const Careers = () => {
   return (
     <section className="min-h-screen overflow-hidden">
-      <PageHero title="Careers" backgroundHero="bg-careers-hero" />
+      <PageHero title="Careers" backgroundHero={bgheropage} />
       <RightArrowSection dataText={dataCare} arrowUbication='top-60' />
       <OurValues title='Why join us?' />
       <ApplyJobs />

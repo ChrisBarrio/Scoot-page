@@ -7,10 +7,13 @@ import mapImg from '../assets/images/world-map-desktop.png';
 
 const Locations = ['New York', 'London', 'Yokohama', 'Jakarta'];
 
+import bgheropage from '../assets/images/about-hero-desktop.jpg'
+
+
 const Location = () => {
   return (
     <section className=" min-h-screen overflow-hidden">
-      <PageHero title="Location" backgroundHero="bg-careers-hero" />
+      <PageHero title="Location" backgroundHero={bgheropage} />
       <div className="relative">
         <img src={mapImg} alt="mapa mundial" className="mx-auto scale-75 max-md:scale-95 max-md:my-10" />
       </div>
